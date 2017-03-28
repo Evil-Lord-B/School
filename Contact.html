@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl-be" >
+<head>
+    <title>Contact</title>
+	<meta charset="utf-8" />
+    <meta name="description" content="contact">
+    <meta name="author" content="Benjamin Salens">
+    <link rel="shortcut icon" href="/IMG/favicon_palmbomen.ico" type="image/x-icon" />
+    <link href="CSS/Style.css" rel="stylesheet" />
+</head>
+<body >
+    <div id="wrapper">
+        <div id="banner">
+            <img src="IMG/HitekLogo.jpg" alt="Logo">
+            <H1>Benjamin Salens</H1>
+            Student multimedia
+            <nav>
+                <label for="show-menu" class="show-menu">Menu</label>
+                <input type="checkbox" id="show-menu" role="button">
+                <ul id="menu">
+                    <li><a href="Index.html">Index</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Fotogalerij.html">Fotogalerij</a></li>
+                    <li><a class="active" href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="content">
+            <h1>Contact</h1>
+            <FORM action="Index.html" method="get">
+                <fieldset style="max-width:300px; margin:auto">
+                    <legend>Contact formulier</legend>
+                    <table>
+                        <tr>
+                            <td>Voornaam:</td>
+                            <td><INPUT type="text" name="voornaam"></td>
+                        </tr>
+                        <tr>
+                            <td>Familienaam:</td>
+                            <td><INPUT type="text" name="familienaam"></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td><INPUT type="text" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td>Geslacht:</td>
+                            <td>
+                                <INPUT type="radio" name="geslacht" value="M"> Man<br>
+                                <INPUT type="radio" name="geslacht" value="V"> Vrouw
+                            </td>
+                        </tr>
+                    </table>
+                    vraag:<br>
+                    <textarea name="vraag" rows="5" cols="33"></textarea><br>
+                    <INPUT type="submit" value="Versturen">
+                    <INPUT type="reset">
+                </fieldset>
+            </FORM> <br><br><br>
+            <div id="gegevenscontainer">
+                <div>
+                    <h2>Mijn gegevens:</h2>
+                    <h3>naam:</h3>
+                    Benjamin Salens
+                    <h3>Email:</h3>
+                    Benjaminsalens@hotmail.com
+                    <h3>Adres:</h3>
+                    Elfde julilaan 29 8520 Kuurne.
+                </div>
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d629.7508845849501!2d3.2712262292166354!3d50.84961874543798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c33bad1c7a4ce3%3A0x9fc09ca495277d1!2sElfde-julilaan+29%2C+8520+Kuurne!5e0!3m2!1snl!2sbe!4v1489528020398" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <footer>
+            &copy 2017 Benjamin Salens ALL RIGHTS RESERVED
+        </footer>
+    </div>
+</body>
+</html>
