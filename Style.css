@@ -1,0 +1,260 @@
+/*Algemeen*/
+html, body {
+    height:100%;
+    background-color:#F5FFA6;
+    min-height:408px;
+}
+#wrapper{
+    height:100%;
+    width:100%;  
+}
+#content{
+   padding:1%;
+   border-left:5px solid #15A6FA;
+   border-right:5px solid #15A6FA;
+}
+/*Footer*/
+footer{
+    text-align:center;
+    background-color:#15A6FA;
+}
+/*Banner*/
+#banner{
+    min-height:100px;
+    background-color:#15A6FA;
+    height:20%;
+    width:100%;  
+    position:relative;
+}
+
+@media screen and (max-width : 408px) { /*bij heel klein scherm */
+    #banner h1{
+        margin-top:0px;
+        font-size:x-large;
+        font-weight:bold;
+    }
+}
+#banner img{
+    height:100%;
+    float:right;
+    margin:auto;
+}
+nav{ /*Navigatie altijd onderaan in banner*/
+    position:absolute; 
+    bottom:0;
+}
+    nav ul, li { /*horizontale navigatie menu*/
+	    display:inline-block;
+        margin:0px;
+        padding:0px;
+        background-color:#15A6FA;
+    }
+        nav li a { /*link van navigatie menu*/
+            min-width:100px; 
+	        height: 20px;
+	        text-align: center;
+	        line-height: 20px;
+            display:block;
+            text-decoration: none;
+        }
+
+        nav ul li a.active {/*link van huidige pagina*/
+            background-color:#F5FFA6; 
+        }
+
+        nav ul li a:hover:not(.active) {/*link van pagina waar muis op staat*/
+            background-color: #0094ff;
+            color: white;
+        }
+/*Responsive maken door drop down menu*/
+.show-menu {/*Style 'show menu' label van button */
+	text-align: center;
+	display: none;/*is standaard verborgen */
+    height: 20px;
+	line-height: 20px;
+}
+ nav input[type=checkbox]{/*Hide checkbox*/
+    display: none;
+    -webkit-appearance: none;
+}
+ 
+@media screen and (max-width : 730px){/*bij klein scherm */
+	nav ul {/*Maak menu dropdown en onzichtbaar*/
+		display:none;
+        position:absolute;
+        top:20px;
+	}
+	.show-menu { /*Toon 'show menu' label*/
+		display:block ;
+	}
+    /*Toon menu wanneer (onzichtbare) checkbox is gechecked*/
+     nav input[type=checkbox]:checked ~ #menu{
+        display: block;
+    }
+     /*alle menu links wijder maken (halve lengte)*/
+	 nav{
+    width: 50%;
+	 }
+    nav ul li, nav li a {
+         width:100%
+	}
+}
+
+/*About*/
+#profileimg{ /*voor profilepic about*/
+   margin-top:1%;
+   margin-right:5%;
+   float:right;
+   height:200px;
+}
+
+#filmpje{ /*voor klein scherm*/
+    width:240px;
+    height:135px;
+}
+@media screen and (min-width: 420px) {/*voor groter scherm*/
+  #filmpje{
+    width:360px;
+    height:202px;
+    }
+}
+@media screen and (min-width: 620px) {/*voor groot scherm*/
+  #filmpje{
+    width:560px;
+    height:315px;
+    }
+}
+
+/*index*/
+#welcomecontent{
+    height:80%;
+    width:100%; 
+    background-image:url("../IMG/DSC_0533.JPG");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#F5FFA6;
+}
+#Welcometitle{
+    margin-left:5%;
+    font-size:100px;
+    font-style:italic;
+    text-align:left;
+}
+@media screen and (max-width : 408px) { /*bij heel klein scherm */
+        #Welcometitle{
+        font-size:75px;
+    }
+}
+/*Projects*/
+.subcontent{
+        min-height:210px;
+        border-style:solid;
+        width:inherit;
+        padding:1%;
+    }
+
+    .subcontent a {
+        float: right;
+        text-align:center;
+        height: auto;
+        width: auto;
+    }
+
+        .subcontent a img {
+            height:200px;
+            width: inherit;
+            border-style:solid;
+        }
+         .subcontent a img:hover {
+            border:solid white;
+        }
+
+/*Contact*/
+#gegevenscontainer{/*bij klein scherm*/
+        border-style:solid;/*de map wordt onder de tekst geplaatst*/
+        width:auto;
+        height:initial;
+        padding:1%;
+}
+#map{
+    width:100%;
+    min-height:200px;
+}
+@media screen and (min-width: 550px) {/*bij groot scherm*/
+     #gegevenscontainer{/*de map wordt naast de tekst geplaatst,*/
+            border-style:solid;/*door gegevenscontainer flex te maken*/
+            width:inherit;
+            height:auto;
+            padding:1%;
+            display:flex;
+            justify-content:space-between;
+    }
+    #map{
+        float:right;
+        margin-left:auto;
+        width:75%;
+        align-self:stretch; /*zo is height:100%;*/
+    }
+}
+
+/*Fotogalerij*/
+.fotogalerij { /*style Fotogalerij*/
+            text-align: center;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+
+        .fotogalerij img { /*style thumbnail*/
+            border: 1px solid black;
+            margin: 4px;
+        }
+        .fotogalerij img:hover {
+            border: 1px solid white;
+            margin: 4px;
+        }
+        .foto-popup {/*grote foto's worden standaard niet getoond*/
+            display: none;
+        }
+
+        .foto-popup:target {/*foto popup : zwarte achtergrond*/
+            display: block;/*wordt getoont*/
+            position: fixed;/*op volledig scherm*/
+            z-index: 999;/* = stack positie (zo boven al de rest)*/
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.8);/* = kleur(zwart) + doorzichtbaarheid 0,8*/
+            max-width: none;
+        }
+
+          .foto-popup img {/*foto popup : foto zelf*/
+            max-width: 90%;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);  /* = verticale positie (Y-as)*/
+        }
+
+        .vorige, .volgende { /*pijltjes*/
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);  
+            text-decoration: none;
+            color: darkgrey;
+            font-size: 5em;
+        }
+        .vorige:hover, .volgende:hover {
+            color: white;
+        }
+        .vorige {
+            left: 20px;
+        }
+        .volgende {
+            right: 20px;
+        }
+
+        @media screen and (max-width: 400px) {
+            .vorige, .volgende { font-size: 3em; }
+        }
