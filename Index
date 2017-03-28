@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl-be">
+<head>
+    <title>Index</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Welcome">
+    <meta name="author" content="Benjamin Salens">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="shortcut icon" href="/IMG/favicon_palmbomen.ico" type="image/x-icon" />
+    <link href="CSS/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <div id="banner">
+            <img src="IMG/HitekLogo.jpg" alt="Logo">
+            <H1>Benjamin Salens</H1>
+            Student multimedia
+            <nav>
+                <label for="show-menu" class="show-menu">Menu</label>
+                <input type="checkbox" id="show-menu" role="button">
+                <ul id="menu">
+                    <li><a class="active" href="Index.html">Index</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Fotogalerij.html">Fotogalerij</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="welcomecontent">
+            <div id="Welcometitle">
+                <br>Welcome
+            </div>
+        </div>
+        <footer>
+            &copy 2017 Benjamin Salens ALL RIGHTS RESERVED
+        </footer>
+    </div>
+</body>
+</html>
